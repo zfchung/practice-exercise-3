@@ -6,9 +6,23 @@
   "author": "ZF Chung (Zack) <zfchung1@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn tsc"
+    "build": "yarn tsc",
+    "test": "yarn jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ]
   },
   "dependencies": {
     "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3"
   }
 }
